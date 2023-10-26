@@ -5,13 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 
-import tn.esprit.devops_project.controllers.SupplierController;
 import tn.esprit.devops_project.entities.Supplier;
-import tn.esprit.devops_project.entities.SupplierCategory;
 import tn.esprit.devops_project.repositories.SupplierRepository;
 import tn.esprit.devops_project.services.SupplierServiceImpl;
 import java.util.ArrayList;
@@ -143,6 +140,7 @@ class SupplierServiceImplTest {
         expectedSuppliers.add(new Supplier());
         expectedSuppliers.add(new Supplier());
 
+
         when(supplierRepository.findAll()).thenReturn(expectedSuppliers);
 
         // Act
@@ -151,6 +149,8 @@ class SupplierServiceImplTest {
         // Assert
         assertEquals(expectedSuppliers, actualSuppliers);
         verify(supplierRepository, times(1)).findAll();
+
+
     }
 
     @Test
