@@ -54,6 +54,7 @@
     </dependencies>
 
     <build>
+    <finalName>5ArcTic5-G4-Projet4Spring</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
