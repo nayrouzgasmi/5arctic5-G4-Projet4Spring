@@ -93,7 +93,7 @@
                                 <rule>
                                     <element>CLASS</element>
                                     <excludes>
-                                        <exclude>com.asimio.demo.Application</exclude>
+                                        <exclude>tn.esprit.Application</exclude>
                                     </excludes>
                                 </rule>
                             </rules>
