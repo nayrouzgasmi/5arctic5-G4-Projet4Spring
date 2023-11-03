@@ -87,12 +87,7 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <dataFile>${project.build.directory}/jacoco.exec</dataFile>
-                    <includes>
-                        <include>tn.esprit.devops_project.*</include> <!-- Remplacez par le package de vos classes -->
-                    </includes>
-                </configuration>
+
 
             </plugin>
 
