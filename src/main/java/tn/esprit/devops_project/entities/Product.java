@@ -24,5 +24,5 @@ public class Product implements Serializable {
     ProductCategory category;
     @ManyToOne
     @JsonIgnore
-    StockDTO stock;
+    Stock stock;
 }
