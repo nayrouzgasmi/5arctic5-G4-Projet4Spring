@@ -20,22 +20,9 @@ public class StockController {
     IStockService stockService;
 
     @PostMapping("/stock")
-    Stock addStock(@RequestBody StockDTO stockDTO){
-        Stock stock = convertDTOtoStock( stockDTO); // Méthode de conversion
+    Stock addStock(@RequestBody Stock stock){
         return stockService.addStock(stock);
     }
-
-    public Stock convertDTOtoStock(StockDTO stockDTO) {
-        Stock stock = new Stock();
-        stock.setIdStock(stockDTO.getIdStock());
-        stock.setTitle(stockDTO.getTitle());
-        stock.setProducts(stockDTO.getProducts());
-
-        // Vous devrez peut-être gérer la conversion pour d'autres champs ici si nécessaire.
-
-        return stock;
-    }
-
 
     @GetMapping("/stock/{id}")
     Stock retrieveStock(@PathVariable Long id){
