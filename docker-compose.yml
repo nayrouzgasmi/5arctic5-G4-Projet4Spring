@@ -19,5 +19,7 @@ services:
       - mysql
     volumes:
       - /var/lib/jenkins/workspace/pipe/DevOps_Project/target:/app
+    networks:
+      - sql_network
  
   
