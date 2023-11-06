@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:8
 
 # Set the working directory inside the container
 WORKDIR /app
