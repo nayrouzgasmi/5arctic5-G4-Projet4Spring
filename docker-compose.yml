@@ -2,7 +2,7 @@ version: "2"
 services:
   backend:
     depends_on: [db]
-    image: mohamedazizali/aziz:1.0
+    image: mohamedazizali/aziz:latest
     ports:
       - "8089:8089"
   db:
