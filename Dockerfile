@@ -1,11 +1,13 @@
-FROM maven:3.9.4-eclipse-temurin-11 AS build
-COPY src /app/src
-COPY pom.xml /app
-WORKDIR /app
-RUN mvn clean package
-
 FROM openjdk:11-jre-slim
+
+# Set the working directory inside the container
 WORKDIR /app
-COPY --from=build /app/target/DevOps_Project-1.0.jar DevOps_Project-1.0.jar
+
+# Copy the Spring Boot application JAR file into the container
+COPY /target/DevOps_Project-1.0.jar DevOps_Project-1.0.jar
+
+# Expose the port your Spring Boot application will run on
 EXPOSE 8082
+
+# Specify the command to run your Spring Boot application
 CMD ["java", "-jar", "DevOps_Project-1.0.jar"]
