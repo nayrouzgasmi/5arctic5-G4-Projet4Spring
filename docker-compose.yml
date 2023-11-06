@@ -1,13 +1,14 @@
-version: "3.3"
+version: '3.1'
+
 services:
   mysqldb:
+    image: mysql:8.2.0
     container_name: mysqldb
-    image: mysql:5.7
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD:  # No password specified
+      MYSQL_ROOT_PASSWORD:
     ports:
-      - "3306:3306"  # Mapping port 3306 from the container to the host
+      - "3306:3306"
     volumes:
       - /home/mysql/data:/var/lib/mysql
 
