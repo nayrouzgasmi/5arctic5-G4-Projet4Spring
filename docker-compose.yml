@@ -13,6 +13,6 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_PASSWORD: root
     ports:
-      - "3307:3306" #jw
+      - "3306:3306" #jw
 
 
