@@ -1,0 +1,21 @@
+version: "3.3"
+services:
+  mysqldb:
+    container_name: mysqldb
+    image: mysql:8
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD:  # No password specified
+    ports:
+      - "3306:3306"  # Mapping port 3306 from the container to the host
+    volumes:
+      - /home/mysql/data:/var/lib/mysql
+
+  spring_app:
+    image: oumayma2/devopsproject
+    container_name: devopscontainer
+    restart: on-failure
+    ports:
+      - 9091:9091
+    depends_on:
+      - mysqldb
