@@ -1,13 +1,4 @@
-FROM openjdk:8
-
-# Set the working directory inside the container
-WORKDIR /app
-
-# Copy the Spring Boot application JAR file into the container
-COPY /target/DevOps_Project-1.0.jar DevOps_Project-1.0.jar
-
-# Expose the port your Spring Boot application will run on
+FROM openjdk:11
 EXPOSE 8082
-
-# Specify the command to run your Spring Boot application
-CMD ["java", "-jar", "DevOps_Project-1.0.jar"]
+ADD target/DevOps_Project-1.0.jar DevOps_Project-1.0.jar
+ENTRYPOINT ["java","-jar","/DevOps_Project-1.0.jar"]
