@@ -10,7 +10,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./mysql-data:/var/lib/mysql
+      - /home/mysql/data:/var/lib/mysql
 
   spring_app:
     image: oumayma2/devopsproject
