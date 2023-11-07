@@ -68,8 +68,8 @@
     <distributionManagement>
         <repository>
             <id>deploymentRepo</id>
-            <name>admin</name>
-            <url>http://192.168.1.18:8081/repository/projet4-spring/</url>
+            <name>Nexus Repository</name>
+            <url>http://192.168.1.18:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
