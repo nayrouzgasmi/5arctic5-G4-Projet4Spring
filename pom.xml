@@ -69,7 +69,7 @@
         <repository>
             <id>deploymentRepo</id>
             <name>admin</name>
-            <url>http://192.168.1.14:8081/repository/projet4-spring/</url>
+            <url>http://192.168.1.18:8081/repository/projet4-spring/</url>
         </repository>
     </distributionManagement>
 
