@@ -32,8 +32,6 @@ services:
   # Frontend application service
   front:
     image: nayrouza/devops:test
-    networks:
-      - mynetwork
     ports:
       - "80:80"
 
