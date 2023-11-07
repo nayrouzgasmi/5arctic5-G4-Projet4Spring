@@ -36,7 +36,13 @@ services:
       MANAGEMENT_ENDPOINT_PROMETHEUS_ENABLED: 'true'
       MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED: 'true'
 
-
+  # Frontend application service
+  front:
+    image: nayrouza/devops:test
+    networks:
+      - mynetwork
+    ports:
+      - "80:80"
 
 
 
