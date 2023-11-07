@@ -1,9 +1,5 @@
-FROM openjdk:11
-EXPOSE 8082
-ADD target/DevOps_Project-1.0.jar DevOps_Project-1.0.jar
-ENTRYPOINT ["java","-jar","/DevOps_Project-1.0.jar"]
 # Use an OpenJDK base image
-FROM openjdk:11-jre-slim
+FROM openjdk:11
 
 # Set the working directory in the container
 WORKDIR /app
