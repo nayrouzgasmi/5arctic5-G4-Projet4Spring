@@ -5,6 +5,13 @@ services:
     image: mohamedazizali/aziz:latest
     ports:
       - "8089:8089"
+
+  frontend:
+    image: mohamedazizali/aziz-front:latest
+    ports:
+      - "8585:8585"
+    depends_on:
+      - backend
   db:
     image: mysql:8.0
     container_name: mysql-db
