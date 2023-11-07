@@ -1,14 +1,9 @@
 version: '3.8'
-networks:
-  mynetwork:
-    driver: bridge
 
 services:
   # MySQL database service
   mysql:
     image: mysql:latest
-    networks:
-      - mynetwork
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: devops
@@ -24,8 +19,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8082:8082"
-    networks:
-      - mynetwork
     depends_on:
       - mysql
     environment:
